@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWSLambda2", "AWSLambda2\AWSLambda2.csproj", "{672F1B41-74A9-49B2-ACFA-CAA6874919AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{672F1B41-74A9-49B2-ACFA-CAA6874919AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{672F1B41-74A9-49B2-ACFA-CAA6874919AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{672F1B41-74A9-49B2-ACFA-CAA6874919AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{672F1B41-74A9-49B2-ACFA-CAA6874919AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {413335C6-F398-4C9B-ABE2-AF91CCF851AB}
+	EndGlobalSection
+EndGlobal
