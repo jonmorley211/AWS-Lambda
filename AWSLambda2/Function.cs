@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Amazon.CloudWatch.Model;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.S3Events;
 using Amazon.SimpleNotificationService;
@@ -50,9 +50,11 @@ namespace AWSLambda2
 
             publish.Wait();
 
-            #region do something here
+            #region do some custom cloudwatch logging here
 
             Amazon.CloudWatch.AmazonCloudWatchClient amazonCloudWatchClient = new Amazon.CloudWatch.AmazonCloudWatchClient();
+
+            PutMetricDataRequest putMetricData = new PutMetricDataRequest();
 
 
             #endregion
