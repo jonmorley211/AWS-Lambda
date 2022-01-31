@@ -18,7 +18,7 @@ namespace AWSLambda2
     {
         
         /// <summary>
-        /// A simple function that takes a string and does a ToUpper
+        /// Function to receive an S3 event and add a message to an SNS Topic
         /// </summary>
         /// <param name="input"></param>
         /// <param name="context"></param>
@@ -49,6 +49,13 @@ namespace AWSLambda2
             Task<PublishResponse> publish = SNSClient.PublishAsync(pubReq);
 
             publish.Wait();
+
+            #region do something here
+
+            Amazon.CloudWatch.AmazonCloudWatchClient amazonCloudWatchClient = new Amazon.CloudWatch.AmazonCloudWatchClient();
+
+
+            #endregion
 
             return message;
         }
