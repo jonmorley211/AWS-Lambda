@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Amazon.CloudWatch.Model;
 using Amazon.Lambda.Core;
 using Amazon.Lambda.S3Events;
 using Amazon.SimpleNotificationService;
@@ -18,7 +18,7 @@ namespace AWSLambda2
     {
         
         /// <summary>
-        /// A simple function that takes a string and does a ToUpper
+        /// Function to receive an S3 event and add a message to an SNS Topic
         /// </summary>
         /// <param name="input"></param>
         /// <param name="context"></param>
@@ -49,6 +49,15 @@ namespace AWSLambda2
             Task<PublishResponse> publish = SNSClient.PublishAsync(pubReq);
 
             publish.Wait();
+
+            #region do some custom cloudwatch logging here
+
+            Amazon.CloudWatch.AmazonCloudWatchClient amazonCloudWatchClient = new Amazon.CloudWatch.AmazonCloudWatchClient();
+
+            PutMetricDataRequest putMetricData = new PutMetricDataRequest();
+
+
+            #endregion
 
             return message;
         }
